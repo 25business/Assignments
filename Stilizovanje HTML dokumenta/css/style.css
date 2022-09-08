@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+}
+
+#main_navigation {
+    background-color: burlywood;
+    display: flex;
+}
+
+#main_navigation>a {
+    display: block;
+    padding: 8px;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 16px;
+}
+
+#main_navigation>a:link, #main_navigation>a:visited {
+    color: white;
+}
+#main_navigation>a:active, #main_navigation>a:hover {
+    color: black;
+}

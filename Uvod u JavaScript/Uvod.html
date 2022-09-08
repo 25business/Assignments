@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Povrsina Kruga</title>
+</head>
+<body>
+    <h3>Unesite Broj</h3>
+    <input type="text" name="txt"  onchange="myFunction(this.value)">
+	<button id="button" type="button">Izracunaj Povrsinu Kruga</button> 
+
+	<script type="text/javascript">
+        var broj = 0;
+        function myFunction(val){
+            broj=val
+        }
+
+	document.getElementById("button").addEventListener("click", izracunaj);
+
+		const Pi = 3.14;
+
+		function izracunaj() {
+            if(broj < 0){
+                alert('Ne mozete uneti broj manji od nule')
+            }
+            else{
+                var povrsina = (broj*broj)*Pi;
+                alert("Povrsina kruga je "+povrsina)
+            }
+            
+		}
+	</script>
+</body>
+</html>

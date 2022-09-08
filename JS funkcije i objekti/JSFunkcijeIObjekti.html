@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Povrsina Kvadra</title>
+</head>
+<body>
+	
+    <label>Duzina:</label></br>
+    <input type="text" name="txt"  onchange="myFunctionDuzina(this.value)"></br>
+    <label>Sirina:</label></br>
+    <input type="text" name="txt"  onchange="myFunctionSirina(this.value)"></br>
+    <label>Visina:</label></br>
+    <input type="text" name="txt"  onchange="myFunctionVisina(this.value)"></br></br>
+	<button id="button" type="button">Izracunaj Povrsinu Kvadra</button> 
+
+	<script type="text/javascript">
+        var duzina = 0;
+        var sirina = 0;
+        var visina = 0;
+        function myFunctionDuzina(val){
+            duzina=val
+        }
+        function myFunctionSirina(val){
+            sirina=val
+        }
+        function myFunctionVisina(val){
+            visina=val
+        }
+
+	document.getElementById("button").addEventListener("click", izracunaj);
+
+		function izracunaj() {
+            if(duzina < 0){
+                alert('Duzina ne sme biti manja od nule')
+            }
+            else if(sirina < 0){
+                alert('Sirina ne sme biti manja od nule')
+            }
+            else if(visina < 0){
+                alert('Visina ne sme biti manja od nule')
+            }
+            else{
+                var povrsina = 2*(duzina*sirina+sirina*visina+visina*sirina);
+                alert("Povrsina kvadra je "+povrsina)
+            }
+		}
+	</script>
+</body>
+</html>
